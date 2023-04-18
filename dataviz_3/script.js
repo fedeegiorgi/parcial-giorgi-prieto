@@ -21,13 +21,25 @@ d3.dsv(";", '147_ruidos_molestos.csv', d3.autoType).then(data => {
           y: 'reclamos',
           fill: '#4773aa',
         }),
+        Plot.text(
+          Array.from(reclamosPorHora, ([key, value]) => ({hora: key, reclamos: value})),
+          {
+            x: d => d.hora,
+            y: d => d.reclamos,
+            text: d => d.reclamos,
+            dy: -10,
+            fill: 'black',
+            align: 'center',
+          }
+        )
       ],
       x: {
         label: 'Hora',
         domain: ["07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00", "01", "02", "03", "04", "05", "06"],
       },
       y: {
-        label: 'Cantidad de reclamos',
+        label: `Cantidad de reclamos por hora en ${d.barrio}`,
+        ticks: 0,
       },
       height: 400,
       width: 600,
