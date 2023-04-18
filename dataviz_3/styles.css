@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+  }
+  #chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  #chart-container > div {
+    margin: 10px;
+  }
+  #chart {
+    overflow-y: auto;
+  }
+  #chart svg {
+    max-width: initial;
+  }
+

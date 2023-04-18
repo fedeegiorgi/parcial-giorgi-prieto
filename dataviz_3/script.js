@@ -29,6 +29,8 @@ d3.dsv(";", '147_ruidos_molestos.csv', d3.autoType).then(data => {
             text: d => d.reclamos,
             dy: -10,
             fill: 'black',
+            fontSize: 14,
+            fontWeight: 'bold',
             align: 'center',
           }
         )
@@ -39,10 +41,11 @@ d3.dsv(";", '147_ruidos_molestos.csv', d3.autoType).then(data => {
       },
       y: {
         label: `Cantidad de reclamos por hora en ${d.barrio}`,
+        labelAlign: 'center',
         ticks: 0,
       },
-      height: 400,
-      width: 600,
+      height: 600,
+      width: 800,
       margin: 50,
     })
 
