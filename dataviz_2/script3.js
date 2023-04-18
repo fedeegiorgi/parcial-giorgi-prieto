@@ -15,48 +15,25 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   })
 
   let chartMap = Plot.plot({
-    
+    // https://github.com/observablehq/plot#projection-options
     projection: {
       type: 'mercator',
       domain: barrios, // Objeto GeoJson a encuadrar
     },
-
     color: {
-      
-      type: 'quantize', 
-      n: 10,
       scheme: 'ylorbr',
-      label: 'Cantidad de denuncias',
-      legend: true,
     },
-
     marks: [
+      Plot.density(
+        data.filter(d=>(d.domicilio_barrio=="RECOLETA")), 
+        { x: 'lon', y: 'lat', fill: 'density',bandwidth: 15, thresholds: 30 }),
       Plot.geo(barrios, {
-        fill: d => d.properties.DENUNCIAS,
         stroke: 'gray',
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
-      Plot.text(
-        barrios.features,
-        Plot.centroid({
-          text: (d) => d.properties.BARRIO,
-          fill: "currentColor",
-          stroke: "white",
-          textAnchor: "center",
-          dx: 4,
-          filter: (d) => d.properties.DENUNCIAS > 300
-        })
-      )
     ],
-
   })
 
-  d3.select('#chart').append(() => chartMap)
+  d3.select('#chart-3').append(() => chartMap)
 
 })
-
-//d3.dsv(";", 'astronautas.csv', d3.autoType).then(data => {
-  console.log(data);
-  
-  d3.select('#chart').append(() => chart);
-//});

@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+  }
+  #chart-container div {
+    display: inline-block;
+    width: calc(33.33% - 10px); /* Establecemos el ancho de cada div que contiene el gráfico */
+    margin-right: 10px; /* Agregamos un margen derecho para separar los gráficos */
+  }
+  #chart-container div:last-child {
+    margin-right: 0; /* Eliminamos el margen derecho del último div para evitar que se salga del contenedor */
+  }
+  #chart-container > div {
+    margin: 10px;
+  }
+  #chart {
+    overflow-y: auto;
+  }
+  #chart svg {
+    max-width: initial;
+  }
