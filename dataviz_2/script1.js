@@ -1,4 +1,4 @@
-const mapaFetch = d3.json('barrios.geojson')
+const mapaFetch = d3.json('barrios1.geojson')
 const dataFetch = d3.dsv(';', '147_ruidos_molestos.csv', d3.autoType)
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
@@ -7,11 +7,11 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   console.log('reclamosPorBarrio', reclamosPorBarrio)
 
   barrios.features.forEach(d => {
-    let nombreBarrio = d.properties.BARRIO
-    let cantReclamos =  reclamosPorBarrio.get(nombreBarrio).length
-    d.properties.DENUNCIAS = cantReclamos
+      let nombreBarrio = d.properties.BARRIO
+      let cantReclamos =  reclamosPorBarrio.get(nombreBarrio).length
+      d.properties.DENUNCIAS = cantReclamos
 
-    console.log(nombreBarrio + ': ' + cantReclamos)
+      console.log(nombreBarrio + ': ' + cantReclamos)
   })
 
   let chartMap = Plot.plot({
@@ -54,3 +54,9 @@ Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
   d3.select('#chart').append(() => chartMap)
 
 })
+
+//d3.dsv(";", 'astronautas.csv', d3.autoType).then(data => {
+  console.log(data);
+  
+  d3.select('#chart').append(() => chart);
+//});
