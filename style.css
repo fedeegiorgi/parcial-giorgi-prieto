@@ -1,0 +1,255 @@
+@font-face {
+    font-family: Oswald;
+    src: url('./fonts/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: Oswald-Bold;
+    src: url('./fonts/Oswald-Bold.ttf');
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url('./fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url('./fonts/Lato-Light.ttf');
+}
+
+@font-face {
+    font-family: Lato-Thin;
+    src: url('./fonts/Lato-Thin.ttf');
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url('./fonts/Lato-Bold.ttf');
+}
+
+.container {
+    width: 1124px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+/* header */
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 100px;
+}
+
+header .logo img {
+    width: 400px;
+}
+
+header .today-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header .today-date .line {
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+header .today-date .date {
+    flex-shrink: 0;
+    font-family: Oswald, sans-serif;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    min-width: 1124px;
+    width: 60%;
+    height: 100px;
+    margin-left: 360px;
+}
+
+footer .topbar {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    position: relative;
+}
+
+footer .topbar img {
+    width: 150px;
+    position: absolute;
+}
+
+footer .topbar .rrss {
+    position: absolute;
+    left: 10px;
+}
+
+footer .topbar .rrss a {
+    text-decoration: none;
+}
+
+footer .topbar .rrss i {
+    color: rgb(60, 60, 60);
+    margin-right: 12px;
+    font-size: 22px;
+}
+
+
+footer .copyright {
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    align-items: center;
+    width: 100%;
+    height: 250px;
+    font-family: Lato-Regular, sans-serif;
+    font-size: 14px;
+    color: rgb(60, 60, 60);
+}
+
+#post {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#post article {
+    display: flex;
+    flex-direction: column;
+}
+
+#post .label {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#post .label span {
+    font-size: 24px;
+    font-family: Oswald-Bold, sans-serif;
+    color: #C33430;
+    margin-right: 15px;
+}
+
+#post .label small {
+    color: rgb(50, 50, 50);
+    font-family: Lato-Regular, sans-serif;
+    font-size: 12px;
+}
+
+#post h1 {
+    color: black;
+    font-family: Lato-Bold, sans-serif;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+#post h2 {
+    color: rgb(80, 80, 80);
+    font-family: Lato-Thin, sans-serif;
+    font-size: 23px;
+}
+
+#post .author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+}
+
+#post .author .info {
+    display: flex;
+    flex-direction: column;
+}
+
+#post .author .info .name {
+    font-size: 15px;
+    font-family: Lato-Regular, sans-serif;
+    margin-bottom: 5px;
+}
+
+#post .author .info .name span {
+    font-family: Lato-Bold, sans-serif;
+}
+
+#post .rrss {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px 0;
+}
+
+#post .rrss .color-fbk { color: rgb(42, 110, 227); }
+#post .rrss .color-twitter { color: rgb(42, 171, 227); }
+#post .rrss .color-linkedin { color: rgb(14, 62, 143); }
+#post .rrss .color-envelope { color: rgb(198, 65, 65); }
+#post .rrss .color-plane { color: rgb(107, 177, 252); }
+
+#post .rrss i {
+    margin: 0 20px;
+}
+
+#post img {
+    width: 100%;
+    max-width: 750px;
+}
+
+#post p {
+    max-width: 750px;
+    font-size: 18px;
+    font-family: Lato-Regular, sans-serif;
+    color: rgb(80, 80, 80);
+    line-height: 30px;
+}
+
+#post p span {
+    font-family: Lato-Bold, sans-serif;
+    color: black;
+}
+
+#chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#chart-container > div {
+    margin: 10px;
+}
+
+#chart {
+    overflow-y: auto;
+}
+
+#chart svg {
+    max-width: initial;
+}
+
+#chartdv1 {
+    margin-left: 200px;
+    margin-right: auto;
+}

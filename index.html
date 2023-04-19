@@ -1,18 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h2>V1</h2>
-    <iframe src="dataviz_1\index.html" width="800" height="600"></iframe>
-    <h2>V2</h2>
-    <iframe src="dataviz_2\index.html" width="800" height="600"></iframe>
-    <h2>V3</h2>
-    <iframe src="dataviz_3\index.html" width="2500" height="650"></iframe>
-</body>
+<html>
+    <head>
+        <title>Parcial VD</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/761684499b.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="img/bavisual.svg" alt="Logo"/>
+                </div>
+                <div class="today-date">
+                    <div class="line"></div>
+                    <div class="date">Miercoles 26 de Abril de 2023</div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <article id="post" class="container">
+                <div class="label">
+                    <span>SOCIEDAD</span>
+                </div>
+                <h1>
+                    ¿No toleras el ruido? Estos son los barrios que deberías evitar para vivir.
+                </h1>
+                <h2>
+                    De Palermo a Liniers, el mapa de la contaminación sonora de los barrios de CABA, según las denuncias por ruidos molestos del SUACI.
+                </h2>
+                <div class="author">
+                    <div class="info">
+                        <div class="name">Por <span>Federico Giorgi y Valentin Prieto</span></div>
+                    </div>
+                </div>
+                <div class="rrss">
+                    <i class="fab fa-facebook-f color-fbk"></i>
+                    <i class="fab fa-twitter color-twitter"></i>
+                    <i class="fab fa-linkedin-in color-linkedin"></i>
+                    <i class="fas fa-envelope color-envelope"></i>
+                    <i class="fas fa-print"></i>
+                    <i class="fas fa-paper-plane color-plane"></i>
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div id="chartdv1"></div>
+                <div id="chart-container">
+                    <div id="chartdv21"></div>
+                    <div id="chartdv22"></div>
+                    <div id="chartdv23"></div>
+                </div>
+                <div id="chart-container">
+                    <div id="chart-0"></div>
+                    <div id="chart-1"></div>
+                    <div id="chart-2"></div>
+                </div>
+            </article>
+        </main>
+        <footer>
+            <div class="topbar">
+                <img src="./img/bavisual.svg" />
+                <div class="rrss">
+                    <a href="#">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-rss"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="copyright">
+                    © 2023 BA Visual
+                </div>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/iframe-resizer/4.3.2/iframeResizer.contentWindow.js"></script>
+        <script src="dataviz_1/script.js"></script>
+        <script src="dataviz_2/script.js"></script>
+        <script src="dataviz_3/script.js"></script>
+    </body>
 </html>
