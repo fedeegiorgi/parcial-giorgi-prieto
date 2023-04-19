@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: Lato-Light;
-    src: url('./fonts/Lato-Light.ttf');
+    font-family: Lato-Italic;
+    src: url('./fonts/Lato-Italic.ttf');
 }
 
 @font-face {
@@ -172,6 +172,18 @@ footer .copyright {
     font-size: 23px;
 }
 
+#post h5 {
+    font-family: Lato-Italic, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+#post #bajada {
+    font-size: 16px;
+    font-family: Lato-Italic, sans-serif;
+    font-style: italic;
+}
+
 #post .author {
     display: flex;
     justify-content: flex-start;
@@ -233,8 +245,8 @@ footer .copyright {
 #chart-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #chart-container > div {
@@ -250,6 +262,6 @@ footer .copyright {
 }
 
 #chartdv1 {
-    margin-left: 200px;
+    margin-left: auto;
     margin-right: auto;
 }
