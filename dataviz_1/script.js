@@ -1,5 +1,5 @@
-const mapaFetch = d3.json('barrios.geojson')
-const dataFetch = d3.dsv(';', '147_ruidos_molestos.csv', d3.autoType)
+const mapaFetch = d3.json('dataviz_1/barrios.geojson')
+const dataFetch = d3.dsv(';', 'dataviz_1/147_ruidos_molestos.csv', d3.autoType)
 
 Promise.all([mapaFetch, dataFetch]).then(([barrios, data]) => {
 
@@ -55,7 +55,7 @@ let chartMap = Plot.plot({
 })
 
 
-d3.select('#chart').append(() => chartMap)
+d3.select('#chartdv1').append(() => chartMap)
 })
 
 

@@ -1,7 +1,7 @@
-const mapaFetch1 = d3.json('barrios1.geojson')
-const dataFetch = d3.dsv(';', '147_ruidos_molestos.csv', d3.autoType)
+const mapaFetch1 = d3.json('dataviz_2/barrios1.geojson')
+const dataFetchdv2 = d3.dsv(';', 'dataviz_2/147_ruidos_molestos.csv', d3.autoType)
 
-Promise.all([mapaFetch1, dataFetch]).then(([barrios, data]) => {
+Promise.all([mapaFetch1, dataFetchdv2]).then(([barrios, data]) => {
 
   const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio)
   console.log('reclamosPorBarrio', reclamosPorBarrio)
@@ -37,18 +37,21 @@ const myColorFunction = d => myColorScale(d.properties.DENUNCIAS)
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
     ],
+    height: 400,
+    width: 350,
+    margin: 50,
   })
 
-  d3.select('#chart-1').append(() => chartMap1)
+  d3.select('#chartdv21').append(() => chartMap1)
 
 })
 
 
 
 // 2
-const mapaFetch2 = d3.json('barrios2.geojson')
+const mapaFetch2 = d3.json('dataviz_2/barrios2.geojson')
 
-Promise.all([mapaFetch2, dataFetch]).then(([barrios, data]) => {
+Promise.all([mapaFetch2, dataFetchdv2]).then(([barrios, data]) => {
 
   const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio)
   console.log('reclamosPorBarrio', reclamosPorBarrio)
@@ -79,18 +82,21 @@ Promise.all([mapaFetch2, dataFetch]).then(([barrios, data]) => {
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
     ],
+    height: 400,
+    width: 350,
+    margin: 50,
   })
 
-  d3.select('#chart-2').append(() => chartMap2)
+  d3.select('#chartdv22').append(() => chartMap2)
 
 })
 
 
 
 // 3
-const mapaFetch3 = d3.json('barrios3.geojson')
+const mapaFetch3 = d3.json('dataviz_2/barrios3.geojson')
 
-Promise.all([mapaFetch3, dataFetch]).then(([barrios, data]) => {
+Promise.all([mapaFetch3, dataFetchdv2]).then(([barrios, data]) => {
 
   const reclamosPorBarrio = d3.group(data, d => d.domicilio_barrio)
   console.log('reclamosPorBarrio', reclamosPorBarrio)
@@ -121,8 +127,11 @@ Promise.all([mapaFetch3, dataFetch]).then(([barrios, data]) => {
         title: d => `${d.properties.BARRIO}\n${d.properties.DENUNCIAS} denuncias`,
       }),
     ],
+    height: 400,
+    width: 350,
+    margin: 50,
   })
 
-  d3.select('#chart-3').append(() => chartMap3)
+  d3.select('#chartdv23').append(() => chartMap3)
 
 })

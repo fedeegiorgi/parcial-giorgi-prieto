@@ -1,4 +1,4 @@
-d3.dsv(";", '147_ruidos_molestos.csv', d3.autoType).then(data => {
+d3.dsv(";", 'dataviz_3/147_ruidos_molestos.csv', d3.autoType).then(data => {
   const reclamosPorBarrio = d3.rollup(data, v => v.length, d => d.domicilio_barrio)
   const top3 = Array.from(reclamosPorBarrio, ([key, value]) => ({barrio: key, reclamos: value}))
     .sort((a, b) => d3.descending(a.reclamos, b.reclamos))
@@ -40,13 +40,13 @@ d3.dsv(";", '147_ruidos_molestos.csv', d3.autoType).then(data => {
         domain: ["07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "00", "01", "02", "03", "04", "05", "06"],
       },
       y: {
-        label: `Cantidad de reclamos por hora en ${d.barrio}`,
+        label: `${d.barrio}`,
         labelAlign: 'center',
         ticks: 0,
       },
-      height: 600,
-      width: 800,
-      margin: 50,
+      height: 200,
+      width: 600,
+      margin: 30,
     })
 
     d3.select(`#chart-${i}`).append(() => chart)
