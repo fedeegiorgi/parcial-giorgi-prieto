@@ -14,6 +14,11 @@ Promise.all([mapaFetch1, dataFetch]).then(([barrios, data]) => {
       console.log(nombreBarrio + ': ' + cantReclamos)
   })
 
+const myColorScale = d3.scaleLinear()
+  .domain([0, 800]) // Rango de valores de la variable
+  .range(['#F0D5D0', '#BF2000']) // Colores mínimo y máximo de la escala
+
+const myColorFunction = d => myColorScale(d.properties.DENUNCIAS)
   let chartMap1 = Plot.plot({
     // https://github.com/observablehq/plot#projection-options
     projection: {
@@ -21,7 +26,7 @@ Promise.all([mapaFetch1, dataFetch]).then(([barrios, data]) => {
       domain: barrios, // Objeto GeoJson a encuadrar
     },
     color: {
-      scheme: 'ylorbr',
+      scheme: 'oranges',
     },
     marks: [
       Plot.density(
@@ -63,7 +68,7 @@ Promise.all([mapaFetch2, dataFetch]).then(([barrios, data]) => {
       domain: barrios, // Objeto GeoJson a encuadrar
     },
     color: {
-      scheme: 'ylorbr',
+      scheme: 'oranges',
     },
     marks: [
       Plot.density(
@@ -105,7 +110,7 @@ Promise.all([mapaFetch3, dataFetch]).then(([barrios, data]) => {
       domain: barrios, // Objeto GeoJson a encuadrar
     },
     color: {
-      scheme: 'ylorbr',
+      scheme: 'oranges',
     },
     marks: [
       Plot.density(
