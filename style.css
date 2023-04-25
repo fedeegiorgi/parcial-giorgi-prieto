@@ -179,7 +179,7 @@ footer .copyright {
 }
 
 #post #bajada {
-    font-size: 16px;
+    font-size: 19px;
     font-family: Lato-Italic, sans-serif;
     font-style: italic;
 }
@@ -230,7 +230,7 @@ footer .copyright {
 }
 
 #post p {
-    max-width: 750px;
+    text-align: justify;
     font-size: 18px;
     font-family: Lato-Regular, sans-serif;
     color: rgb(80, 80, 80);
