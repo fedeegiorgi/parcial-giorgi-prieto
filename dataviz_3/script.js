@@ -19,7 +19,7 @@ d3.dsv(";", 'dataviz_3/147_ruidos_molestos.csv', d3.autoType).then(data => {
         Plot.barY(Array.from(reclamosPorHora, ([key, value]) => ({hora: key, reclamos: value})), {
           x: 'hora',
           y: 'reclamos',
-          fill: '#BF2000',
+          fill: '#C33430',
         }),
         Plot.text(
           Array.from(reclamosPorHora, ([key, value]) => ({hora: key, reclamos: value})),
@@ -44,8 +44,8 @@ d3.dsv(";", 'dataviz_3/147_ruidos_molestos.csv', d3.autoType).then(data => {
         labelAlign: 'center',
         ticks: 0,
       },
-      height: 200,
-      width: 600,
+      height: 240,
+      width: 1200,
       margin: 30,
     })
 

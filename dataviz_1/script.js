@@ -44,11 +44,24 @@ let chartMap = Plot.plot({
       barrios.features,
       Plot.centroid({
         text: (d) => d.properties.BARRIO,
-        fill: "black",
-        stroke: "white",
-        textAnchor: "center",
-        dx: 4,
-        filter: (d) => d.properties.DENUNCIAS > 300
+        fill: "white",
+        textAnchor: 'center',
+        fontSize: '13px',
+        fontWeight: 'bold',
+        filter: (d) => d.properties.DENUNCIAS > 361,
+      })
+    ),
+    Plot.text(
+      barrios.features,
+      Plot.centroid({
+        text: (d) => d.properties.BARRIO,
+        fill: "white",
+        textAnchor: 'center',
+        fontSize: '13px',
+        fontWeight: 'bold',
+        dy: 20,
+        dx: -13.5,
+        filter: (d) => d.properties.DENUNCIAS == 361,
       })
     )
   ],
