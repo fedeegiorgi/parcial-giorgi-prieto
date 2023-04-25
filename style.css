@@ -275,3 +275,65 @@ footer .copyright {
     max-width: 100%;
     height: 415px;
 }
+.palermo {
+    display: flex;
+}
+#palermosoho {
+    position: absolute;
+    height: 60px;
+    top: 216px;
+    right: 33px
+}
+
+  
+.textopalermo {
+    position: absolute;
+    top: 184px;
+    left: 95px;
+    color: #3e3b3b;
+    padding: 5px;
+    font-size: 18px;
+    font-weight:150;
+}
+
+  
+.caballito {
+    display: flex;
+    position: relative;
+}
+#parquerivadavia {
+    position: absolute;
+    height: 60px;
+    top: 184px;
+    left: 65px
+}
+  
+.textocaballito {
+    position: absolute;
+    top: 154px;
+    left: 116px;
+    color: #3e3b3b;
+    padding: 5px;
+    font-size: 18px;
+    font-weight:150;
+}
+
+.recoleta {
+    display: flex;
+    position: relative;
+}
+#facultadmedicina {
+    position: absolute;
+    height: 60px;
+    top: 215px;
+    right: 24px
+}
+.textorecoleta {
+    position: absolute;
+    top: 184px;
+    left: 158px;
+    color: #3e3b3b;
+    padding: 5px;
+    font-size: 18px;
+    font-weight:150;
+}
