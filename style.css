@@ -78,12 +78,13 @@ header .today-date .date {
 
 footer {
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: column;
     min-width: 1124px;
     width: 60%;
     height: 100px;
-    margin-left: 360px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer .topbar {
@@ -93,7 +94,7 @@ footer .topbar {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid lightgrey;
-    position: relative;
+    position: absolute;
 }
 
 footer .topbar img {
