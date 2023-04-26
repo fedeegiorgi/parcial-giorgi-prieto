@@ -17,7 +17,7 @@ En el segundo volvimos a utilizar mapas pero esta vez mapas especificos de cada 
 
 En el último utilizamos la marca de barras, pues consideramos que es una manera muy buena de comparar cantidades, utilizamos texto en lugar de una escala para marcar la cantidad de denuncias en cada hora porque nos parecio mas especifico e impactante visualmente. 
 
-Con estas marcas y canales, logramos enfatizar en lo que queríamos para seguir nuestro hilo narrativo.
+Consideramos que con estas decisiones de diseño, logramos enfatizar en lo que queríamos para seguir nuestro hilo narrativo.
 
 ### Problemas con el conjunto de datos
 No tuvimos muchos problemas filtrando y obteniendo informacion del conjunto de datos. Nuestro mayor problema se dió al realizar la última visualización, cuando queríamos filtrar por horas y notamos que nuestro dataset tenía el horario en el cual se efectuó la denuncia como un string y no como un objeto de tipo hora. Para resolverlo, al momento de filtrar la información parseamos los strings con el horario en un objeto de tipo fecha para luego poder obtener solo la hora. El resultado fue un mapa "reclamosPorHora" donde las llaves eran solo las horas en formato 24hs y los valores eran la cantidad de objetos con hora_ingreso en dicha hora (es decir, la cantidad de denuncias hechas en la hora de la llave).
