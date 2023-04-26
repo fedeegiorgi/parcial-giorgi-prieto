@@ -347,34 +347,27 @@ footer .copyright {
 }
 #barrios-titulos {
     position: relative;
-    
-    bottom: 50px;
+    top: 20px;
+    font-size: 24px;
+    font-weight:150;
+    font-family: Lato-Bold, sans-serif;
 }
 .palermo-bajada {
     position: relative;
-    top: 32px;
-    left: 130px;
+    top: 36px;
+    left: 115px;
     color: #3e3b3b;
     padding: 5px;
-    font-size: 20px;
-    font-weight:150;
-    font-family: Lato-Bold, sans-serif;
 }
 .caballito-bajada {
     position: absolute;
-    left: 520px;
+    left: 500px;
     color: #3e3b3b;
     padding: 5px;
-    font-size: 20px;
-    font-weight:150;
-    font-family: Lato-Bold, sans-serif;
 }
 .recoleta-bajada {
     position: relative;
-    left: 890px;
+    left: 860px;
     color: #3e3b3b;
     padding: 5px;
-    font-size: 20px;
-    font-weight:150;
-    font-family: Lato-Bold, sans-serif;
 }
